@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Icecream Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <h1 class="mb-5 mt-3">Icecream shop</h1>
+      </div>
+      <div class="row">
+        <form>
+          <fieldset>
+            <legend>How many scoops?</legend>
+            <input type="radio" name="scoops" id="onescoop" checked />
+            <label for="onescoop">One scoop</label>
+            <input type="radio" name="scoops" id="twoscoops" />
+            <label for="twoscoops">Two scoops</label>
+            <input type="radio" name="scoops" id="threescoops" />
+            <label for="threescoops">Three scoops</label>
+          </fieldset>
+          <fieldset>
+            <input type="radio" name="icecreamcontainer" id="cup" />
+            <label for="cup">Cup</label>
+            <input type="radio" name="icecreamcontainer" id="cone" />
+            <label for="cone">Cone</label>
+          </fieldset>
+          <fieldset id="options-fields">
+            <legend>Options (cup only)</legend>
+            <input type="checkbox" name="hfudge" value="hfudge" id="hfudge" />
+            <label for="hfudge">Hot fudge (+ $1.00)</label>
+            <input type="checkbox" name="sprink" value="sprink" id="sprink" />
+            <label for="sprink">Sprinkles (+ $0.50)</label>
+            <input
+              type="checkbox"
+              name="whipcream"
+              value="whipcream"
+              id="whipcream"
+            />
+            <label for="whipcream">Whipped cream (+ $0.60)</label>
+            <input type="checkbox" name="cherry" value="cherry" id="cherry" />
+            <label for="cherry">Cherry (+ $0.25)</label>
+          </fieldset>
+          <div class="col-12">
+            <input
+              type="submit"
+              class="btn btn-primary"
+              value="Get price"
+              id="submit"
+            />
+          </div>
+        </form>
+        <p id="icecreamtotal"></p>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
