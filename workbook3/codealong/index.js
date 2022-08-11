@@ -38,24 +38,22 @@ function showTeamInfo() {
   let image = document.createElement("img");
 
   let numTeams = teamsList.length;
-  for (let i = 0; i < numTeams; i++) {
-    if (teamIndex == 0) {
-      displayInfo.innerHTML = "";
-    } else if (teamIndex >= 1) {
-      let teamName = teams[teamIndex].name;
-      let value = teams[teamIndex].code;
-      let location = teams[teamIndex].plays;
-      displayInfo.innerHTML =
-        "You selected the " +
-        teamName +
-        " (" +
-        value +
-        ") " +
-        " Who play in " +
-        location;
-      image.src = "images/" + teams[teamIndex].code + ".png";
-      imageLocation.appendChild(image);
-    }
+  if (teamIndex == 0) {
+    displayInfo.innerHTML = "";
+  } else if (teamIndex >= 1) {
+    let teamName = teams[teamIndex].name;
+    let value = teams[teamIndex].code;
+    let location = teams[teamIndex].plays;
+    displayInfo.innerHTML =
+      "You selected the " +
+      teamName +
+      " (" +
+      value +
+      ") " +
+      " Who play in " +
+      location;
+    image.src = "images/" + teams[teamIndex].code + ".png";
+    imageLocation.appendChild(image);
   }
 
   return false;
