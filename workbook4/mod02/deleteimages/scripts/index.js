@@ -34,10 +34,10 @@ function onImageNamesDDLChange() {
   newDiv.appendChild(br);
   newDiv.appendChild(newButton);
   imageDiv.appendChild(newDiv);
-  newButton.onclick = function () {
-    // 'this' refers to the element the event occurred on
-    let thisButton = this;
-    let myParentDiv = thisButton.parentElement;
-    imageDiv.removeChild(myParentDiv);
-  };
+  newButton.onclick = deleteImage;
+}
+
+function deleteImage() {
+  // 'this' refers to the element the event occurred on
+  imageDiv.removeChild(this.parentElement);
 }
